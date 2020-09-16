@@ -36,7 +36,7 @@ namespace HotelBooking.UnitTests
         }
        
         [Fact]
-        public void GetFullyOccupiedDates_StartDateNotInTheFuture_ThrowsArgumentException()
+        public void GetFullyOccupiedDates_StartDateNotAfterEndDate_ThrowsArgumentException()
         {
             DateTime startDate = DateTime.Today.AddDays(1);
             DateTime endDate = DateTime.Today;
