@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{EBCEE58F-7209-4106-B29D-025BA44C3C3C}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="HotelBooking.Core/Services/BookingManager.cs">
     <Files>
-      <File FileName="HotelBooking.UnitTests/BookingManagerTests.cs" Line="39" Column="21" />
+      <File FileName="HotelBooking.UnitTests/BookingManagerTests.cs" Line="42" Column="71" />
       <File FileName="HotelBooking.Core/Services/BookingManager.cs" Line="54" Column="52" />
+      <File FileName="HotelBooking.Core/Interfaces/IBookingManager.cs" Line="10" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="HotelBooking" expanded="True">
             <Node name="HotelBooking.Core" expanded="True">
+              <Node name="Interfaces" expanded="True" />
               <Node name="Services" expanded="True">
                 <Node name="BookingManager.cs" selected="True" />
               </Node>
