@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Core/HotelBooking.Core.csproj",
+      "projectUniqueName": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj",
       "projectName": "HotelBooking.Core",
-      "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Core/HotelBooking.Core.csproj",
+      "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj",
       "packagesPath": "/Users/emil/.nuget/packages/",
-      "outputPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Core/obj/",
+      "outputPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

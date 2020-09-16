@@ -1,26 +1,19 @@
 ﻿<Properties StartupConfiguration="{EBCEE58F-7209-4106-B29D-025BA44C3C3C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="HotelBooking.UnitTests/BookingManagerTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HotelBooking.Core/Services/BookingManager.cs">
     <Files>
-      <File FileName="HotelBooking.Core/Entities/Customer.cs" Line="1" Column="1" />
-      <File FileName="HotelBooking.Core/Services/BookingManager.cs" Line="1" Column="1" />
-      <File FileName="HotelBooking.Core/Interfaces/IRepository.cs" Line="1" Column="1" />
-      <File FileName="HotelBooking.UnitTests/BookingManagerTests.cs" Line="37" Column="1" />
-      <File FileName="HotelBooking.UnitTests/Fakes/FakeBookingRepository.cs" Line="1" Column="1" />
-      <File FileName="HotelBooking.UnitTests/RoomsControllerTests.cs" Line="1" Column="1" />
+      <File FileName="HotelBooking.UnitTests/BookingManagerTests.cs" Line="39" Column="21" />
+      <File FileName="HotelBooking.Core/Services/BookingManager.cs" Line="54" Column="52" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="HotelBooking" expanded="True">
             <Node name="HotelBooking.Core" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Entities" expanded="True" />
-              <Node name="Services" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="BookingManager.cs" selected="True" />
+              </Node>
             </Node>
-            <Node name="HotelBooking.UnitTests" expanded="True">
-              <Node name="Fakes" expanded="True" />
-              <Node name="BookingManagerTests.cs" selected="True" />
-            </Node>
+            <Node name="HotelBooking.UnitTests" expanded="True" />
           </Node>
         </State>
       </Pad>

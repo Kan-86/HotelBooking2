@@ -5718,11 +5718,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.WebApi/HotelBooking.WebApi.csproj",
+      "projectUniqueName": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.WebApi/HotelBooking.WebApi.csproj",
       "projectName": "HotelBooking.WebApi",
-      "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.WebApi/HotelBooking.WebApi.csproj",
+      "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.WebApi/HotelBooking.WebApi.csproj",
       "packagesPath": "/Users/emil/.nuget/packages/",
-      "outputPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.WebApi/obj/",
+      "outputPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.WebApi/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -5739,11 +5739,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Core/HotelBooking.Core.csproj": {
-              "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Core/HotelBooking.Core.csproj"
+            "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj": {
+              "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj"
             },
-            "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj": {
-              "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj"
+            "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj": {
+              "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj"
             }
           }
         }

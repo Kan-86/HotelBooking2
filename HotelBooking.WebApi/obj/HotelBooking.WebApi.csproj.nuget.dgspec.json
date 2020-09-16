@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.WebApi/HotelBooking.WebApi.csproj": {}
+    "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.WebApi/HotelBooking.WebApi.csproj": {}
   },
   "projects": {
-    "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Core/HotelBooking.Core.csproj": {
+    "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Core/HotelBooking.Core.csproj",
+        "projectUniqueName": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj",
         "projectName": "HotelBooking.Core",
-        "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Core/HotelBooking.Core.csproj",
+        "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj",
         "packagesPath": "/Users/emil/.nuget/packages/",
-        "outputPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Core/obj/",
+        "outputPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj": {
+    "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj",
+        "projectUniqueName": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj",
         "projectName": "HotelBooking.Infrastructure",
-        "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj",
+        "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj",
         "packagesPath": "/Users/emil/.nuget/packages/",
-        "outputPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Infrastructure/obj/",
+        "outputPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -81,8 +81,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Core/HotelBooking.Core.csproj": {
-                "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Core/HotelBooking.Core.csproj"
+              "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj": {
+                "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj"
               }
             }
           }
@@ -120,14 +120,14 @@
         }
       }
     },
-    "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.WebApi/HotelBooking.WebApi.csproj": {
+    "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.WebApi/HotelBooking.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.WebApi/HotelBooking.WebApi.csproj",
+        "projectUniqueName": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.WebApi/HotelBooking.WebApi.csproj",
         "projectName": "HotelBooking.WebApi",
-        "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.WebApi/HotelBooking.WebApi.csproj",
+        "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.WebApi/HotelBooking.WebApi.csproj",
         "packagesPath": "/Users/emil/.nuget/packages/",
-        "outputPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.WebApi/obj/",
+        "outputPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.WebApi/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -144,11 +144,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Core/HotelBooking.Core.csproj": {
-                "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Core/HotelBooking.Core.csproj"
+              "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj": {
+                "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj"
               },
-              "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj": {
-                "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj"
+              "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj": {
+                "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Infrastructure/HotelBooking.Infrastructure.csproj"
               }
             }
           }

@@ -34,6 +34,13 @@ namespace HotelBooking.UnitTests
             // Assert
             Assert.NotEqual(-1, roomId);
         }
+       
+        [Fact]
+        public void GetFullyOccupiedDates_StartDateNotInTheFuture_ThrowsArgumentException()
+        {
+            DateTime date = DateTime.Today;
+            Assert.Throws<ArgumentException>(() => bookingManager.GetFullyOccupiedDates(date, date));
+        }
 
     }
 }
