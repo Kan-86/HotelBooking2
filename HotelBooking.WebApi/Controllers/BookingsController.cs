@@ -10,16 +10,15 @@ namespace HotelBooking.WebApi.Controllers
     public class BookingsController : Controller
     {
         private IRepository<Booking> bookingRepository;
-        private IRepository<Customer> customerRepository;
-        private IRepository<Room> roomRepository;
+        //private IRepository<Customer> customerRepository;
+        //private IRepository<Room> roomRepository;
         private IBookingManager bookingManager;
 
-        public BookingsController(IRepository<Booking> bookingRepos, IRepository<Room> roomRepos,
-            IRepository<Customer> customerRepos, IBookingManager manager)
+        public BookingsController(IRepository<Booking> bookingRepos, IBookingManager manager)
         {
             bookingRepository = bookingRepos;
-            roomRepository = roomRepos;
-            customerRepository = customerRepos;
+            //roomRepository = roomRepos;
+            //customerRepository = customerRepos;
             bookingManager = manager;
         }
 

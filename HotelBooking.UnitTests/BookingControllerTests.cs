@@ -4,6 +4,7 @@ using Moq;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Xunit;
 
 namespace HotelBooking.UnitTests
 {
@@ -11,8 +12,6 @@ namespace HotelBooking.UnitTests
     {
         private BookingsController controller;
         private Mock<IRepository<Booking>> fakeBookingRepo;
-        private Mock<IRepository<Room>> fakeRoomRepo;
-        private Mock<IRepository<Customer>> fakeCustomerRepo;
         private Mock<IBookingManager> fakeBookingManager;
 
         public BookingControllerTests()
@@ -26,6 +25,7 @@ namespace HotelBooking.UnitTests
 
             // Create fake RoomRepository. 
             fakeBookingRepo = new Mock<IRepository<Booking>>();
+            fakeBookingManager = new Mock<IBookingManager>();
 
             // Implement fake GetAll() method.
             fakeBookingRepo.Setup(x => x.GetAll()).Returns(booking);
@@ -52,9 +52,18 @@ namespace HotelBooking.UnitTests
 
             // Create RoomsController
             controller = new BookingsController(fakeBookingRepo.Object, 
-                fakeRoomRepo.Object, 
-                fakeCustomerRepo.Object,
                 fakeBookingManager.Object);
+        }
+
+        [Fact]
+        public void GetAll_ReturnsListWithCorrectNumberOfRooms()
+        {
+            // Act
+            var result = controller.Get() as List<Booking>;
+            var noOfRooms = result.Count;
+
+            // Assert
+            Assert.Equal(2, noOfRooms);
         }
     }
 }
