@@ -8184,38 +8184,36 @@
     ]
   },
   "packageFolders": {
-    "/Users/emil/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Kristofer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.UnitTests/HotelBooking.UnitTests.csproj",
+      "projectUniqueName": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.UnitTests\\HotelBooking.UnitTests.csproj",
       "projectName": "HotelBooking.UnitTests",
-      "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.UnitTests/HotelBooking.UnitTests.csproj",
-      "packagesPath": "/Users/emil/.nuget/packages/",
-      "outputPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.UnitTests/obj/",
+      "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.UnitTests\\HotelBooking.UnitTests.csproj",
+      "packagesPath": "C:\\Users\\Kristofer\\.nuget\\packages\\",
+      "outputPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/Users/emil/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Kristofer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj": {
-              "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj"
+            "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
+              "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj"
             },
-            "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.WebApi/HotelBooking.WebApi.csproj": {
-              "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.WebApi/HotelBooking.WebApi.csproj"
+            "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.WebApi\\HotelBooking.WebApi.csproj": {
+              "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.WebApi\\HotelBooking.WebApi.csproj"
             }
           }
         }
@@ -8259,11 +8257,14 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

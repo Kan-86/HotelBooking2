@@ -1,6 +1,8 @@
 using System;
 using HotelBooking.Core;
 using HotelBooking.UnitTests.Fakes;
+using HotelBooking.WebApi.Controllers;
+using Moq;
 using Xunit;
 
 namespace HotelBooking.UnitTests
@@ -43,5 +45,12 @@ namespace HotelBooking.UnitTests
             Assert.Throws<ArgumentException>(() => bookingManager.GetFullyOccupiedDates(startDate, endDate));
         }
 
+        [Fact]
+        public void CreateBooking_IDIsLowerThanZero_ThrowsArgumentException()
+        {
+            var id = 0;
+            var booking = new Booking { CustomerId = id };
+            Assert.Throws<ArgumentException>(() => bookingManager.CreateBooking(booking));
+        }
     }
 }

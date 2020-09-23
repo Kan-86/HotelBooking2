@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj": {}
+    "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {}
   },
   "projects": {
-    "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj": {
+    "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj",
+        "projectUniqueName": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
         "projectName": "HotelBooking.Core",
-        "projectPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/HotelBooking.Core.csproj",
-        "packagesPath": "/Users/emil/.nuget/packages/",
-        "outputPath": "/Users/emil/Downloads/HotelBooking_Clean-master/HotelBooking2/HotelBooking.Core/obj/",
+        "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
+        "packagesPath": "C:\\Users\\Kristofer\\.nuget\\packages\\",
+        "outputPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/emil/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Kristofer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
