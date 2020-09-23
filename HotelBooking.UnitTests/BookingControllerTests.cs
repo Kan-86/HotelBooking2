@@ -1,5 +1,6 @@
 ﻿using HotelBooking.Core;
 using HotelBooking.WebApi.Controllers;
+using Microsoft.AspNetCore.Mvc;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -30,33 +31,17 @@ namespace HotelBooking.UnitTests
             // Implement fake GetAll() method.
             fakeBookingRepo.Setup(x => x.GetAll()).Returns(booking);
 
-
-            // Implement fake Get() method.
-            //fakeRoomRepository.Setup(x => x.Get(2)).Returns(rooms[1]);
-
-
-            // Alternative setup with argument matchers:
-
-            // Any integer:
-            //roomRepository.Setup(x => x.Get(It.IsAny<int>())).Returns(rooms[1]);
-
-            // Integers from 1 to 2 (using a predicate)
-            // If the fake Get is called with an another argument value than 1 or 2,
-            // it returns null, which corresponds to the behavior of the real
-            // repository's Get method.
-            //fakeRoomRepository.Setup(x => x.Get(It.Is<int>(id => id > 0 && id < 3))).Returns(rooms[1]);
-
             // Integers from 1 to 2 (using a range)
             fakeBookingRepo.Setup(x => x.Get(It.IsInRange<int>(1, 2, Moq.Range.Inclusive))).Returns(booking[1]);
 
 
-            // Create RoomsController
+            // Create BookingController
             controller = new BookingsController(fakeBookingRepo.Object, 
                 fakeBookingManager.Object);
         }
 
         [Fact]
-        public void GetAll_ReturnsListWithCorrectNumberOfRooms()
+        public void GetAll_ReturnsListWithCorrectNumberOfBookings()
         {
             // Act
             var result = controller.Get() as List<Booking>;
@@ -64,6 +49,18 @@ namespace HotelBooking.UnitTests
 
             // Assert
             Assert.Equal(2, noOfRooms);
+        }
+
+        [Fact]
+        public void GetById_BookingExists_ReturnsIActionResultWithRoom()
+        {
+            // Act
+            var result = controller.Get(2) as ObjectResult;
+            var room = result.Value as Booking;
+            var roomId = room.Id;
+
+            // Assert
+            Assert.InRange<int>(roomId, 1, 2);
         }
     }
 }
