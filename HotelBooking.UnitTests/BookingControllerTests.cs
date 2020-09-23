@@ -62,5 +62,25 @@ namespace HotelBooking.UnitTests
             // Assert
             Assert.InRange<int>(roomId, 1, 2);
         }
+
+        [Fact]
+        public void Delete_WhenIdIsLargerThanZero_RemoveIsCalled()
+        {
+            // Act
+            controller.Delete(1);
+
+            // Assert against the mock object
+            fakeBookingRepo.Verify(x => x.Remove(1), Times.Once);
+        }
+
+        [Fact]
+        public void Delete_WhenIdIsLessThanOne_RemoveIsNotCalled()
+        {
+            // Act
+            controller.Delete(0);
+
+            // Assert against the mock object
+            fakeBookingRepo.Verify(x => x.Remove(It.IsAny<int>()), Times.Never());
+        }
     }
 }
