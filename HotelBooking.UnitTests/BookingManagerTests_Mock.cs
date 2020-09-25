@@ -40,5 +40,13 @@ namespace HotelBooking.UnitTests
             DateTime date = new DateTime();
             Assert.Throws<ArgumentException>(() => _bookingManager.FindAvailableRoom(date, date));
         }
+
+        [Theory]
+        [JsonData("D:/Skoli/7Onn/Test/HotelBooking2/HotelBooking.UnitTests/testdata.json")]
+        public void CreateBooking_IDIsLowerThanZero_ThrowsArgumentException(int id)
+        {
+            var booking = new Booking { CustomerId = id };
+            Assert.Throws<ArgumentException>(() => _bookingManager.CreateBooking(booking));
+        }
     }
 }
