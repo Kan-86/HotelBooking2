@@ -20,15 +20,14 @@ namespace HotelBooking.UnitTests
 
             var booking = new List<Booking>
             {
-                new Booking { Id = 1, CustomerId = 1, EndDate = date.AddDays(1), StartDate = date, IsActive = true, RoomId = 1 },
-                new Booking { Id = 2, CustomerId = 2, EndDate = date.AddDays(2), StartDate = date, IsActive = true, RoomId = 2  },
+                new Booking { Id = 1, CustomerId = 1, EndDate = date.AddDays(20), StartDate = date.AddDays(10), IsActive = true, RoomId = 1 },
+                new Booking { Id = 2, CustomerId = 2, EndDate = date.AddDays(21), StartDate = date.AddDays(11), IsActive = true, RoomId = 2  },
             };
             _fakeBookingManager = new Mock<IBookingManager>();
             _fakeRoomRepo = new Mock<IRepository<Room>>();
             _fakeBookingRepo = new Mock<IRepository<Booking>>();
 
-            // Get available rooms
-            _fakeBookingManager.Setup(x => x.FindAvailableRoom(date, date.AddDays(1))).Verifiable();
+            _fakeBookingRepo.Setup(x => x.GetAll()).Returns(booking);
 
 
             _bookingManager = new BookingManager(_fakeBookingRepo.Object, _fakeRoomRepo.Object);
@@ -39,6 +38,14 @@ namespace HotelBooking.UnitTests
         {
             DateTime date = new DateTime();
             Assert.Throws<ArgumentException>(() => _bookingManager.FindAvailableRoom(date, date));
+        }
+
+        [Fact]
+        public void GetFullyOccupiedDates_NotNull()
+        {
+            DateTime date = DateTime.Now;
+            var nrOfRooms =_bookingManager.GetFullyOccupiedDates(date.AddDays(10), date.AddDays(20));
+            Assert.NotNull(nrOfRooms);
         }
 
         [Theory]
