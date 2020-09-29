@@ -8184,20 +8184,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kristofer\\.nuget\\packages\\": {}
+    "C:\\Users\\Tomasz\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.UnitTests\\HotelBooking.UnitTests.csproj",
+      "projectUniqueName": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.UnitTests\\HotelBooking.UnitTests.csproj",
       "projectName": "HotelBooking.UnitTests",
-      "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.UnitTests\\HotelBooking.UnitTests.csproj",
-      "packagesPath": "C:\\Users\\Kristofer\\.nuget\\packages\\",
-      "outputPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.UnitTests\\obj\\",
+      "projectPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.UnitTests\\HotelBooking.UnitTests.csproj",
+      "packagesPath": "C:\\Users\\Tomasz\\.nuget\\packages\\",
+      "outputPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Kristofer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Tomasz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -8209,11 +8214,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
-              "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj"
+            "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
+              "projectPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj"
             },
-            "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.WebApi\\HotelBooking.WebApi.csproj": {
-              "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.WebApi\\HotelBooking.WebApi.csproj"
+            "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.WebApi\\HotelBooking.WebApi.csproj": {
+              "projectPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.WebApi\\HotelBooking.WebApi.csproj"
             }
           }
         }
@@ -8264,7 +8269,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -14,6 +14,8 @@ namespace HotelBooking.UnitTests
         private Mock<IRepository<Room>> _fakeRoomRepo;
         private Mock<IRepository<Booking>> _fakeBookingRepo;
         private BookingManager _bookingManager;
+        private static string startupPat1h = System.IO.Directory.GetCurrentDirectory();
+        private static string startupPath2 = Environment.CurrentDirectory;
         public BookingManagerTests_Mock()
         {
             DateTime date = DateTime.Today;
@@ -49,7 +51,7 @@ namespace HotelBooking.UnitTests
         }
 
         [Theory]
-        [JsonData("D:/Skoli/7Onn/Test/HotelBooking2/HotelBooking.UnitTests/testdata.json")]
+        [JsonData("testdata.json")]
         public void CreateBooking_IDIsLowerThanZero_ThrowsArgumentException(int id)
         {
             var booking = new Booking { CustomerId = id };
