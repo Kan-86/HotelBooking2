@@ -43,11 +43,11 @@ namespace HotelBooking.UnitTests
         }
 
         [Fact]
-        public void GetFullyOccupiedDates_NotNull()
+        public void GetFullyOccupiedDates_NotEmpty()
         {
             DateTime date = DateTime.Now;
             var nrOfRooms =_bookingManager.GetFullyOccupiedDates(date.AddDays(10), date.AddDays(20));
-            Assert.NotNull(nrOfRooms);
+            Assert.NotEmpty(nrOfRooms);
         }
 
         [Theory]
