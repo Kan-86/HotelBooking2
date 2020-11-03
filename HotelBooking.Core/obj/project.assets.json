@@ -8,25 +8,20 @@
     ".NETStandard,Version=v2.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Tomasz\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Kristofer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
+      "projectUniqueName": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
       "projectName": "HotelBooking.Core",
-      "projectPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
-      "packagesPath": "C:\\Users\\Tomasz\\.nuget\\packages\\",
-      "outputPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\obj\\",
+      "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
+      "packagesPath": "C:\\Users\\Kristofer\\.nuget\\packages\\",
+      "outputPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Tomasz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Kristofer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -63,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -49,7 +49,7 @@ namespace HotelBooking.IntegrationTests
         public void FindAvailableRoom_RoomNotAvailable_RoomIdIsMinusOne()
         {
             // Act
-            var roomId = bookingManager.FindAvailableRoom(DateTime.Today.AddDays(8), DateTime.Today.AddDays(8));
+            var roomId = bookingManager.FindAvailableRoom(DateTime.Today.AddDays(21), DateTime.Today.AddDays(24));
             // Assert
             Assert.Equal(-1, roomId);
         }

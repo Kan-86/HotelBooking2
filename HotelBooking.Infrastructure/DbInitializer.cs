@@ -38,12 +38,12 @@ namespace HotelBooking.Infrastructure
                 new Room { Description="C" }
             };
 
-            DateTime date = DateTime.Today.AddDays(4);
+            DateTime date = DateTime.Today.AddDays(20);
             List<Booking> bookings = new List<Booking>
             {
-                new Booking { StartDate=date, EndDate=date.AddDays(14), IsActive=true, CustomerId=1, RoomId=1 },
-                new Booking { StartDate=date, EndDate=date.AddDays(14), IsActive=true, CustomerId=2, RoomId=2 },
-                new Booking { StartDate=date, EndDate=date.AddDays(14), IsActive=true, CustomerId=1, RoomId=3 }
+                new Booking { StartDate=date, EndDate=date.AddDays(25), IsActive=true, CustomerId=1, RoomId=1 },
+                new Booking { StartDate=date, EndDate=date.AddDays(25), IsActive=true, CustomerId=2, RoomId=2 },
+                new Booking { StartDate=date, EndDate=date.AddDays(25), IsActive=true, CustomerId=1, RoomId=3 }
             };
 
             context.Customer.AddRange(customers);
