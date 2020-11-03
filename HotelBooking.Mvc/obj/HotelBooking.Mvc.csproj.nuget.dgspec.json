@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Mvc\\HotelBooking.Mvc.csproj": {}
+    "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Mvc\\HotelBooking.Mvc.csproj": {}
   },
   "projects": {
-    "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
+    "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
+        "projectUniqueName": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
         "projectName": "HotelBooking.Core",
-        "projectPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
-        "packagesPath": "C:\\Users\\Tomasz\\.nuget\\packages\\",
-        "outputPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\obj\\",
+        "projectPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
+        "packagesPath": "C:\\Users\\ptoma\\.nuget\\packages\\",
+        "outputPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Tomasz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ptoma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -60,22 +56,18 @@
         }
       }
     },
-    "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj": {
+    "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj",
+        "projectUniqueName": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj",
         "projectName": "HotelBooking.Infrastructure",
-        "projectPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Tomasz\\.nuget\\packages\\",
-        "outputPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\obj\\",
+        "projectPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ptoma\\.nuget\\packages\\",
+        "outputPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Tomasz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ptoma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -87,8 +79,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
-                "projectPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj"
+              "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
+                "projectPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj"
               }
             }
           }
@@ -126,22 +118,18 @@
         }
       }
     },
-    "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Mvc\\HotelBooking.Mvc.csproj": {
+    "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Mvc\\HotelBooking.Mvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Mvc\\HotelBooking.Mvc.csproj",
+        "projectUniqueName": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Mvc\\HotelBooking.Mvc.csproj",
         "projectName": "HotelBooking.Mvc",
-        "projectPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Mvc\\HotelBooking.Mvc.csproj",
-        "packagesPath": "C:\\Users\\Tomasz\\.nuget\\packages\\",
-        "outputPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Mvc\\obj\\",
+        "projectPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Mvc\\HotelBooking.Mvc.csproj",
+        "packagesPath": "C:\\Users\\ptoma\\.nuget\\packages\\",
+        "outputPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Mvc\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Tomasz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ptoma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -153,11 +141,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
-                "projectPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj"
+              "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
+                "projectPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj"
               },
-              "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj": {
-                "projectPath": "E:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj"
+              "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj": {
+                "projectPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj"
               }
             }
           }
