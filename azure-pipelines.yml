@@ -1,4 +1,9 @@
 # ASP.NET Core
+- task: katalonTask@0
+  inputs:
+    version: '7.8.1'
+    location: '7.8.1'
+    executeArgs: '-retry=0 -testSuitePath="Test Suites/New Test Suite" -executionProfile="default" -browserType="Web Service" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
 # Build and test ASP.NET Core projects targeting .NET Core.
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
