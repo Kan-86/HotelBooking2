@@ -34,5 +34,6 @@ steps:
     arguments: '--configuration $(buildConfiguration)'
 - task: katalonTask@0
   inputs:
-    version: '7,8.1'
+    version: '7.8.1'
+    location: 'C:\Users\Tomasz\OneDrive\Documents\Kalton studio\Katalon_Studio_Windows_64-7.8.1'
     executeArgs: '-retry=0 -testSuitePath="Test Suites/New Test Suite" -executionProfile="default" -browserType="Web Service" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
