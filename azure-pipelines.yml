@@ -34,5 +34,5 @@ steps:
     arguments: '--configuration $(buildConfiguration)'
 - task: katalonTask@0
   inputs:
-    version: '6.2.6'
+    version: '7.8.0'
     executeArgs: ' -retry=0 -testSuitePath="Test Suites/New Test Suite" -executionProfile="default" -browserType="Web Service" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
