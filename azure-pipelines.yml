@@ -35,4 +35,4 @@ steps:
 - task: katalonTask@0
   inputs:
     version: '7.8.1'
-    executeArgs: '-retry=0 -testSuitePath="Test Suites/New Test Suite" -executionProfile="default" -browserType="Web Service" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
+    executeArgs: 'katalonc -noSplash -runMode=console -retry=0 -testSuitePath="Test Suites/New Test Suite" -executionProfile="default" -browserType="Web Service" -apiKey="acd13ccb-3b5c-4c2f-85af-cb63260ef18e" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
