@@ -34,5 +34,7 @@ steps:
     arguments: '--configuration $(buildConfiguration)'
 - task: katalonTask@0
   inputs:
-    version: '7.8.0'
+- task: katalonTask@0
+  inputs:
+    location: 'E:\School\PBSWe20\Test\Katalon Studio - HotelBooking2\API\HotelBooking2\Katalon_Studio_Engine_Linux_64-7.8.1'
     executeArgs: ' -retry=0 -testSuitePath="Test Suites/New Test Suite" -executionProfile="default" -browserType="Web Service" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
