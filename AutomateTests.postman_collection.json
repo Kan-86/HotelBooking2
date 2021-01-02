@@ -1,0 +1,728 @@
+{
+	"info": {
+		"_postman_id": "4f1fba14-91a3-49b7-a7a0-523abcc73275",
+		"name": "AutomateTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/bookings getall",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"//First Test Case, check if status code is 200\r",
+							"pm.test(\"Status code is 200\", () => {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Second Test Case, Check if dates is not empty, must contain date\r",
+							"pm.test(\"Test array properties, start and endDate can't be empty\", () => {\r",
+							"    //errors array is empty\r",
+							"  pm.expect(jsonData[0].startDate).to.be.not.empty;\r",
+							"    //areas includes \"goods\"\r",
+							"  pm.expect(jsonData[0].endDate).to.be.not.empty;\r",
+							"});\r",
+							"\r",
+							"//Third Test Case, check if the body is valid\r",
+							"pm.test(\"response must be valid and have a body\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"//Fourth Test Case, the if the response contains name and the id (Hard coded values)\r",
+							"pm.test(\"Person is John Smith and id is 1\", () => {\r",
+							"  pm.expect(jsonData[0].customer.name).to.eql(\"John Smith\");\r",
+							"  pm.expect(jsonData[0].customer.id).to.eql(1);\r",
+							"  pm.expect(jsonData[0].customer.email).to.eql('js@gmail.com')\r",
+							"});\r",
+							"\r",
+							"//Fifth Test Case, Check if the get result includes the customerId \r",
+							"pm.test(\"Body contains customerId\",() => {\r",
+							"  pm.expect(pm.response.text()).to.include(\"customerId\");\r",
+							"});\r",
+							"\r",
+							"// Sixth Test Case, Check if the response time is below 200ms\r",
+							"pm.test(\"Response time is less than 200ms\", () => {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"// Seventh Test Case, Check the data type of the respons\r",
+							"pm.test(\"Test data type of the response\", () => {\r",
+							"  pm.expect(jsonData[0].customer).to.be.an(\"object\");\r",
+							"  pm.expect(jsonData[0].customer.name).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData[0].customer.id).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData[0].customer.email).to.be.an(\"string\");\r",
+							"});\r",
+							"\r",
+							"// Eighth Test Case, Check the status code if it is Created\r",
+							"pm.test(\"Status code name has string OK\", () => {\r",
+							"  pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"// Ninth check if object is contained\r",
+							"pm.test(\"Object is contained\", () => {\r",
+							"  const expectedObject = {\r",
+							"    \"id\": 3,\r",
+							"    \"startDate\": \"2021-01-22T00:00:00+01:00\",\r",
+							"    \"endDate\": \"2021-02-16T00:00:00+01:00\",\r",
+							"    \"isActive\": true,\r",
+							"    \"customerId\": 1\r",
+							"  };\r",
+							"  pm.expect(jsonData[0]).to.deep.include(expectedObject);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"bookings"
+					]
+				},
+				"description": "This is a get request for bookings"
+			},
+			"response": [
+				{
+					"name": "/bookings getall",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Jan 2021 13:03:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"startDate\": \"2021-01-22T00:00:00+01:00\",\n        \"endDate\": \"2021-02-16T00:00:00+01:00\",\n        \"isActive\": true,\n        \"customerId\": 1,\n        \"roomId\": 3,\n        \"customer\": {\n            \"id\": 1,\n            \"name\": \"John Smith\",\n            \"email\": \"js@gmail.com\"\n        },\n        \"room\": {\n            \"id\": 3,\n            \"description\": \"C\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"startDate\": \"2021-01-22T00:00:00+01:00\",\n        \"endDate\": \"2021-02-16T00:00:00+01:00\",\n        \"isActive\": true,\n        \"customerId\": 2,\n        \"roomId\": 2,\n        \"customer\": {\n            \"id\": 2,\n            \"name\": \"Jane Doe\",\n            \"email\": \"jd@gmail.com\"\n        },\n        \"room\": {\n            \"id\": 2,\n            \"description\": \"B\"\n        }\n    },\n    {\n        \"id\": 1,\n        \"startDate\": \"2021-01-22T00:00:00+01:00\",\n        \"endDate\": \"2021-02-16T00:00:00+01:00\",\n        \"isActive\": true,\n        \"customerId\": 1,\n        \"roomId\": 1,\n        \"customer\": {\n            \"id\": 1,\n            \"name\": \"John Smith\",\n            \"email\": \"js@gmail.com\"\n        },\n        \"room\": {\n            \"id\": 1,\n            \"description\": \"A\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/bookings/1 details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"//First Test Case, check if status code is 200\r",
+							"pm.test(\"Status code is 200\", () => {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Second Test Case, Check if dates is not empty, must contain date\r",
+							"pm.test(\"Test array properties, start and endDate can't be empty\", () => {\r",
+							"    //errors array is empty\r",
+							"  pm.expect(jsonData.startDate).to.be.not.empty;\r",
+							"    //areas includes \"goods\"\r",
+							"  pm.expect(jsonData.endDate).to.be.not.empty;\r",
+							"});\r",
+							"\r",
+							"//Third Test Case, check if the body is valid\r",
+							"pm.test(\"response must be valid and have a body\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"//Fourth Test Case, the if the response contains name and the id (Hard coded values)\r",
+							"pm.test(\"Person is John Smith and id is 1\", () => {\r",
+							"  pm.expect(jsonData.customer.name).to.eql(\"John Smith\");\r",
+							"  pm.expect(jsonData.customer.id).to.eql(1);\r",
+							"  pm.expect(jsonData.customer.email).to.eql('js@gmail.com')\r",
+							"});\r",
+							"\r",
+							"//Fifth Test Case, Check if the get result includes the customerId \r",
+							"pm.test(\"Body contains customerId\",() => {\r",
+							"  pm.expect(pm.response.text()).to.include(\"customerId\");\r",
+							"});\r",
+							"\r",
+							"// Sixth Test Case, Check if the response time is below 200ms\r",
+							"pm.test(\"Response time is less than 200ms\", () => {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"// Seventh Test Case, Check the data type of the respons\r",
+							"pm.test(\"Test data type of the response\", () => {\r",
+							"  pm.expect(jsonData.customer).to.be.an(\"object\");\r",
+							"  pm.expect(jsonData.customer.name).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.customer.id).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.customer.email).to.be.an(\"string\");\r",
+							"});\r",
+							"\r",
+							"// Eighth Test Case, Check the status code if it is Created\r",
+							"pm.test(\"Status code name has string OK\", () => {\r",
+							"  pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"// Ninth check if object is contained\r",
+							"pm.test(\"Object is contained\", () => {\r",
+							"  const expectedObject = {\r",
+							"    \"isActive\": true,\r",
+							"    \"customerId\": 1\r",
+							"  };\r",
+							"  pm.expect(pm.response.json()).to.deep.include(expectedObject);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3002/bookings/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"bookings",
+						"1"
+					]
+				},
+				"description": "Get bookings with id 1"
+			},
+			"response": [
+				{
+					"name": "/bookings/1 details",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3002/bookings/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3002",
+							"path": [
+								"bookings",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Jan 2021 13:00:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"startDate\": \"2021-01-22T00:00:00+01:00\",\n    \"endDate\": \"2021-02-16T00:00:00+01:00\",\n    \"isActive\": true,\n    \"customerId\": 1,\n    \"roomId\": 1,\n    \"customer\": {\n        \"id\": 1,\n        \"name\": \"John Smith\",\n        \"email\": \"js@gmail.com\"\n    },\n    \"room\": {\n        \"id\": 1,\n        \"description\": \"A\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/bookings post requests",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"//First Test Case, check if status code is 200\r",
+							"pm.test(\"Status code is 201\", () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"//Second Test Case, Check if dates is not empty, must contain date\r",
+							"pm.test(\"Test array properties, start, customerId and endDate can't be empty\", () => {\r",
+							"  // Startdate can't be empty\r",
+							"  pm.expect(jsonData.startDate).to.be.not.empty;\r",
+							"  // Endate cant be empty\r",
+							"  pm.expect(jsonData.endDate).to.be.not.empty;\r",
+							"  // must include customerId\r",
+							"  pm.expect(jsonData.customerId).to.be.not.null;\r",
+							"});\r",
+							"\r",
+							"//Third Test Case, check if the body is valid\r",
+							"pm.test(\"response must be valid and have a body\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"//Fourth Test Case, the if the response contains name and the id (Hard coded values)\r",
+							"pm.test(\"Person is John Smith and id is 1\", () => {\r",
+							"  pm.expect(jsonData.customer.name).to.eql(\"John Smith\");\r",
+							"  pm.expect(jsonData.customer.id).to.eql(1);\r",
+							"  pm.expect(jsonData.customer.email).to.eql('js@gmail.com')\r",
+							"});\r",
+							"\r",
+							"//Fifth Test Case, Check if the get result includes the customerId \r",
+							"pm.test(\"Body contains customerId\",() => {\r",
+							"  pm.expect(pm.response.text()).to.include(\"customerId\");\r",
+							"});\r",
+							"\r",
+							"// Sixth Test Case, Check if the response time is below 200ms\r",
+							"pm.test(\"Response time is less than 200ms\", () => {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"// Seventh Test Case, Check the data type of the respons\r",
+							"pm.test(\"Test data type of the response\", () => {\r",
+							"  pm.expect(jsonData.customer).to.be.an(\"object\");\r",
+							"  pm.expect(jsonData.customerId).to.be.an(\"number\");\r",
+							"  pm.expect(jsonData.customer.name).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.customer.id).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.customer.email).to.be.an(\"string\");\r",
+							"});\r",
+							"\r",
+							"// Eighth Test Case, Check the status code if it is Created\r",
+							"pm.test(\"Status code name has string created\", () => {\r",
+							"  pm.response.to.have.status(\"Created\");\r",
+							"});\r",
+							"\r",
+							"// Ninth check if object is contained\r",
+							"pm.test(\"Object is contained\", () => {\r",
+							"  const expectedObject = {\r",
+							"    \"isActive\": true,\r",
+							"    \"customerId\": 1\r",
+							"  };\r",
+							"  pm.expect(pm.response.json()).to.deep.include(expectedObject);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startDate\": \"2022-02-21T00:00:00+01:00\",\r\n    \"endDate\": \"2022-02-25T00:00:00+01:00\",\r\n    \"isActive\": true,\r\n    \"customerId\": 1,\r\n    \"roomId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3002/bookings",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"bookings"
+					]
+				},
+				"description": "This is a post request for bookings"
+			},
+			"response": [
+				{
+					"name": "/bookings post requests",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startDate\": \"2022-02-21T00:00:00+01:00\",\r\n    \"endDate\": \"2022-02-25T00:00:00+01:00\",\r\n    \"isActive\": true,\r\n    \"customerId\": 1,\r\n    \"roomId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3002/bookings",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3002",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Jan 2021 13:03:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Location",
+							"value": "http://127.0.0.1:3002/Bookings"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"startDate\": \"2022-02-21T00:00:00+01:00\",\n    \"endDate\": \"2022-02-25T00:00:00+01:00\",\n    \"isActive\": true,\n    \"customerId\": 1,\n    \"roomId\": 1,\n    \"customer\": {\n        \"id\": 1,\n        \"name\": \"John Smith\",\n        \"email\": \"js@gmail.com\"\n    },\n    \"room\": {\n        \"id\": 1,\n        \"description\": \"A\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/bookings edit request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"//First Test Case, check if status code is 200\r",
+							"pm.test(\"Status code is 200\", () => {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Second Test Case, Check if dates is not empty, must contain date\r",
+							"pm.test(\"Test array properties, start, customerId and endDate can't be empty\", () => {\r",
+							"  // Startdate can't be empty\r",
+							"  pm.expect(jsonData.startDate).to.be.not.empty;\r",
+							"  // Endate cant be empty\r",
+							"  pm.expect(jsonData.endDate).to.be.not.empty;\r",
+							"  // must include customerId\r",
+							"  pm.expect(jsonData.customerId).to.be.not.null;\r",
+							"});\r",
+							"\r",
+							"//Third Test Case, check if the body is valid\r",
+							"pm.test(\"response must be valid and have a body\", function () {\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"//Fourth Test Case, the if the response contains name and the id (Hard coded values)\r",
+							"pm.test(\"Person is John Smith and id is 1\", () => {\r",
+							"  pm.expect(jsonData.customer.name).to.eql(\"John Smith\");\r",
+							"  pm.expect(jsonData.customer.id).to.eql(1);\r",
+							"  pm.expect(jsonData.customer.email).to.eql('js@gmail.com')\r",
+							"});\r",
+							"\r",
+							"//Fifth Test Case, Check if the get result includes the customerId \r",
+							"pm.test(\"Body contains customerId\",() => {\r",
+							"  pm.expect(pm.response.text()).to.include(\"customerId\");\r",
+							"});\r",
+							"\r",
+							"// Sixth Test Case, Check if the response time is below 200ms\r",
+							"pm.test(\"Response time is less than 200ms\", () => {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"// Seventh Test Case, Check the data type of the respons\r",
+							"pm.test(\"Test data type of the response\", () => {\r",
+							"  pm.expect(jsonData.customer).to.be.an(\"object\");\r",
+							"  pm.expect(jsonData.customerId).to.be.an(\"number\");\r",
+							"  pm.expect(jsonData.customer.name).to.be.a(\"string\");\r",
+							"  pm.expect(jsonData.customer.id).to.be.a(\"number\");\r",
+							"  pm.expect(jsonData.customer.email).to.be.an(\"string\");\r",
+							"});\r",
+							"\r",
+							"// Eighth Test Case, Check the status code if it is Created\r",
+							"pm.test(\"Status code name has string OK\", () => {\r",
+							"  pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"// Ninth check if object is contained\r",
+							"pm.test(\"Object is contained\", () => {\r",
+							"  const expectedObject = {\r",
+							"    \"isActive\": true,\r",
+							"    \"customerId\": 1\r",
+							"  };\r",
+							"  pm.expect(pm.response.json()).to.deep.include(expectedObject);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"isActive\": true,\r\n    \"customerId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3002/bookings/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"bookings",
+						"1"
+					]
+				},
+				"description": "This is a put request for bookings"
+			},
+			"response": [
+				{
+					"name": "/bookings edit request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"isActive\": true,\r\n    \"customerId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3002/bookings/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3002",
+							"path": [
+								"bookings",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Jan 2021 13:03:32 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"startDate\": \"2021-01-22T00:00:00+01:00\",\n    \"endDate\": \"2021-02-16T00:00:00+01:00\",\n    \"isActive\": true,\n    \"customerId\": 1,\n    \"roomId\": 1,\n    \"customer\": {\n        \"id\": 1,\n        \"name\": \"John Smith\",\n        \"email\": \"js@gmail.com\"\n    },\n    \"room\": {\n        \"id\": 1,\n        \"description\": \"A\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "/bookings post with error 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"//First Test Case, check if status code is 200\r",
+							"pm.test(\"Status code is 201\", () => {\r",
+							"  pm.response.to.have.status(400);\r",
+							"});\r",
+							"// Second Test Case, Check if the response time is below 200ms\r",
+							"pm.test(\"Response time is less than 200ms\", () => {\r",
+							"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status is an error\", function () {\r",
+							"    pm.response.to.be.error;\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"isActive\": null,\r\n    \"customerId\": null,\r\n    \"roomId\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3002/bookings",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3002",
+					"path": [
+						"bookings"
+					]
+				},
+				"description": "Make sure it throws error 400 if the variables are null"
+			},
+			"response": [
+				{
+					"name": "/bookings post with error 400",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startDate\": null,\r\n    \"endDate\": null,\r\n    \"isActive\": null,\r\n    \"customerId\": null,\r\n    \"roomId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3002/bookings",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3002",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 02 Jan 2021 13:03:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"|1e9093c-48f504bf613ed1f0.\",\n    \"errors\": {\n        \"$.startDate\": [\n            \"The JSON value could not be converted to System.DateTime. Path: $.startDate | LineNumber: 1 | BytePositionInLine: 21.\"\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
