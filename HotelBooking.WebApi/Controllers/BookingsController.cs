@@ -54,7 +54,7 @@ namespace HotelBooking.WebApi.Controllers
 
             if (created)
             {
-                return CreatedAtRoute("GetBookings", null);
+                return CreatedAtRoute("GetBookings", booking);
             }
             else
             {
@@ -86,7 +86,7 @@ namespace HotelBooking.WebApi.Controllers
             modifiedBooking.CustomerId = booking.CustomerId;
 
             bookingRepository.Edit(modifiedBooking);
-            return NoContent();
+            return Ok(modifiedBooking);
         }
 
         // DELETE api/bookings/5
