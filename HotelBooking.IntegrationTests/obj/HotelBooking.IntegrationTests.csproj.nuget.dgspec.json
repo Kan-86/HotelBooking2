@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.IntegrationTests\\HotelBooking.IntegrationTests.csproj": {}
+    "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.IntegrationTests\\HotelBooking.IntegrationTests.csproj": {}
   },
   "projects": {
-    "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
+    "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
+        "projectUniqueName": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
         "projectName": "HotelBooking.Core",
-        "projectPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
-        "packagesPath": "C:\\Users\\ptoma\\.nuget\\packages\\",
-        "outputPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\obj\\",
+        "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj",
+        "packagesPath": "C:\\Users\\Kristofer\\.nuget\\packages\\",
+        "outputPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ptoma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kristofer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,21 +58,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj": {
+    "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj",
         "projectName": "HotelBooking.Infrastructure",
-        "projectPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\ptoma\\.nuget\\packages\\",
-        "outputPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\obj\\",
+        "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Kristofer\\.nuget\\packages\\",
+        "outputPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ptoma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kristofer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -79,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
-                "projectPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj"
+              "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
+                "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj"
               }
             }
           }
@@ -96,7 +102,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[5.0.2, )"
             }
           },
           "imports": [
@@ -114,21 +120,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.IntegrationTests\\HotelBooking.IntegrationTests.csproj": {
+    "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.IntegrationTests\\HotelBooking.IntegrationTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.IntegrationTests\\HotelBooking.IntegrationTests.csproj",
+        "projectUniqueName": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.IntegrationTests\\HotelBooking.IntegrationTests.csproj",
         "projectName": "HotelBooking.IntegrationTests",
-        "projectPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.IntegrationTests\\HotelBooking.IntegrationTests.csproj",
-        "packagesPath": "C:\\Users\\ptoma\\.nuget\\packages\\",
-        "outputPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.IntegrationTests\\obj\\",
+        "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.IntegrationTests\\HotelBooking.IntegrationTests.csproj",
+        "packagesPath": "C:\\Users\\Kristofer\\.nuget\\packages\\",
+        "outputPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.IntegrationTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ptoma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kristofer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -141,11 +147,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
-                "projectPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj"
+              "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj": {
+                "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Core\\HotelBooking.Core.csproj"
               },
-              "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj": {
-                "projectPath": "F:\\School\\PBSWe20\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj"
+              "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj": {
+                "projectPath": "D:\\Skoli\\7Onn\\Test\\HotelBooking2\\HotelBooking.Infrastructure\\HotelBooking.Infrastructure.csproj"
               }
             }
           }
@@ -159,13 +165,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[3.1.7, )"
+              "version": "[5.0.2, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.7.1, )"
+              "version": "[16.8.3, )"
             },
             "xunit": {
               "target": "Package",
@@ -193,7 +203,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

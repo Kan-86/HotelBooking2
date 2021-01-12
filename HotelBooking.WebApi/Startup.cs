@@ -7,28 +7,41 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using IHostingEnvironment = Microsoft.Extensions.Hosting.IHostingEnvironment;
 
 namespace HotelBooking.WebApi
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
+            Environment = env;
         }
 
         public IConfiguration Configuration { get; }
-
+        public IHostingEnvironment Environment { get; }
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<HotelBookingContext>(opt => opt.UseInMemoryDatabase("HotelBookingDb"));
 
             services.AddScoped<IRepository<Room>, RoomRepository>();
             services.AddScoped<IRepository<Customer>, CustomerRepository>();
             services.AddScoped<IRepository<Booking>, BookingRepository>();
             services.AddScoped<IBookingManager, BookingManager>();
             services.AddTransient<IDbInitializer, DbInitializer>();
+
+            if (Environment.IsDevelopment())
+            {
+                // In-memory database:
+                services.AddDbContext<HotelBookingContext>(opt => opt.UseInMemoryDatabase("HotelBookingDb"));
+            }
+            else
+            {
+                // Azure SQL database:dsadasd
+                services.AddDbContext<HotelBookingContext>(opt =>
+                         opt.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
+            }
 
             services.AddControllers();
         }
@@ -47,6 +60,17 @@ namespace HotelBooking.WebApi
                     var dbContext = services.GetService<HotelBookingContext>();
                     var dbInitializer = services.GetService<IDbInitializer>();
                     dbInitializer.Initialize(dbContext);
+                }
+            }
+            {
+                using (var scope = app.ApplicationServices.CreateScope())
+                {
+
+                    var services = scope.ServiceProvider;
+                    var dbContext = services.GetService<HotelBookingContext>();
+                    var dbInitializer = services.GetService<IDbInitializer>();
+                    dbInitializer.Initialize(dbContext);
+                    dbContext.Database.EnsureCreated();
                 }
             }
 
